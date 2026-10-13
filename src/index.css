@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --color-charcoal-950: #050505;
+  --color-charcoal-900: #0b0b0b;
+  --color-charcoal-800: #151412;
+  --color-charcoal-700: #1f1d19;
+  --color-cream: #f8f6f1;
+  --color-copper: #b98a56;
+  --color-copper-600: #a27a4a;
+  --color-brick: #9b3e2f;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+}
+
+body {
+  @apply bg-charcoal-950 text-cream antialiased;
+  font-feature-settings: 'ss01' 1, 'ss02' 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-copper) 30%, transparent);
+}
