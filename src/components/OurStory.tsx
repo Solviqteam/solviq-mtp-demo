@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { PhotoPlaceholder } from '@/components/PhotoPlaceholder'
 
 export function OurStory() {
   return (
@@ -32,11 +33,9 @@ export function OurStory() {
             className="order-1 lg:order-2"
           >
             <div className="aspect-[4/5] overflow-hidden rounded-sm border border-white/5">
-              <img
-                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1974&auto=format&fit=crop"
-                alt="Conceptual restaurant interior — demo image"
-                className="h-full w-full object-cover object-center"
-                loading="lazy"
+              <PhotoPlaceholder
+                label="Interior photography"
+                className="h-full w-full"
               />
             </div>
           </motion.div>

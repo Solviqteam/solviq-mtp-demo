@@ -1,5 +1,6 @@
 import { ArrowRight } from 'lucide-react'
 import { motion } from 'framer-motion'
+import { PhotoPlaceholder } from '@/components/PhotoPlaceholder'
 import { menuItems } from '@/data/menu'
 
 const featured = menuItems.filter((i) => i.featured)
@@ -15,7 +16,7 @@ export function SignatureDishes() {
               Built to <span className="text-copper">Share</span>
             </h2>
             <p className="mt-4 max-w-2xl text-lg text-cream/80">
-              Conceptual showcase of standout plates. Images and descriptions are illustrative only and can be replaced with verified assets.
+              Conceptual showcase of standout plates. Names and descriptions are illustrative only and can be replaced with verified menu details.
             </p>
           </div>
           <a
@@ -37,14 +38,10 @@ export function SignatureDishes() {
               transition={{ duration: 0.6, delay: idx * 0.1 }}
               className="group relative overflow-hidden rounded-sm border border-white/5 bg-charcoal-800/60"
             >
-              <div className="aspect-[4/5] overflow-hidden">
-                <img
-                  src={item.image}
-                  alt={`${item.name} — conceptual demo image`}
-                  className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
-                  loading="lazy"
-                />
-              </div>
+              <PhotoPlaceholder
+                label={`${item.name} photo`}
+                className="aspect-[4/5]"
+              />
               <div className="p-6">
                 <div className="flex items-start justify-between gap-4">
                   <h3 className="text-xl sm:text-2xl font-semibold">{item.name}</h3>

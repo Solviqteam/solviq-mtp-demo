@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import { PhotoPlaceholder } from '@/components/PhotoPlaceholder'
 import { menuItems } from '@/data/menu'
 
 const categories = [
@@ -28,7 +29,7 @@ export function Menu() {
             What We're <span className="text-copper">Smoking</span>
           </h2>
           <p className="mt-4 mx-auto max-w-2xl text-lg text-cream/80">
-            Concept menu only. Prices and items are illustrative and unverified. Actual menu will be updated when provided by the client.
+            Concept menu only, priced in Malaysian Ringgit (RM). Items and prices are illustrative and unverified.
           </p>
         </div>
 
@@ -62,14 +63,10 @@ export function Menu() {
               transition={{ duration: 0.3 }}
               className="group flex flex-col overflow-hidden rounded-sm border border-white/5 bg-charcoal-800/60"
             >
-              <div className="aspect-[16/10] overflow-hidden">
-                <img
-                  src={item.image}
-                  alt={`${item.name} — conceptual demo image`}
-                  className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
-                  loading="lazy"
-                />
-              </div>
+              <PhotoPlaceholder
+                label={`${item.name} photo`}
+                className="aspect-[16/10]"
+              />
               <div className="flex flex-1 flex-col p-6">
                 <div className="flex items-start justify-between gap-4">
                   <h3 className="text-lg sm:text-xl font-semibold">{item.name}</h3>
