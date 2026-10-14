@@ -33,10 +33,16 @@ export function Menu() {
           </p>
         </div>
 
-        <div className="mt-8 flex flex-wrap justify-center gap-2 sm:gap-3">
+        <div
+          className="mt-8 flex flex-wrap justify-center gap-2 sm:gap-3"
+          role="group"
+          aria-label="Filter menu by category"
+        >
           {categories.map((cat) => (
             <button
               key={cat.id}
+              type="button"
+              aria-pressed={activeCategory === cat.id}
               onClick={() => setActiveCategory(cat.id)}
               className={`inline-flex items-center rounded-sm px-4 py-2 text-sm transition-colors ${
                 activeCategory === cat.id
@@ -50,17 +56,15 @@ export function Menu() {
         </div>
 
         <motion.div
-          layout
+          key={activeCategory}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.25 }}
           className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
         >
           {filtered.map((item) => (
-            <motion.div
+            <div
               key={item.id}
-              layout
-              initial={{ opacity: 0, scale: 0.98 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.98 }}
-              transition={{ duration: 0.3 }}
               className="group flex flex-col overflow-hidden rounded-sm border border-white/5 bg-charcoal-800/60"
             >
               <PhotoPlaceholder
@@ -73,9 +77,9 @@ export function Menu() {
                   <span className="text-lg font-medium text-copper">{item.price}</span>
                 </div>
                 <p className="mt-3 text-base text-cream/80 leading-relaxed flex-1">{item.description}</p>
-                <p className="mt-4 text-xs text-cream/50">*Illustrative demo content — not verified.*</p>
+                <p className="mt-4 text-xs text-cream/50">Illustrative demo content, not verified.</p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </motion.div>
 

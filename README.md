@@ -3,7 +3,7 @@
 Independent concept demo by **Solviq**. This is an unofficial design concept and is not affiliated with or endorsed by Meat the Porkers Group.
 
 ## Stack
-- React 18 + TypeScript
+- React 19 + TypeScript
 - Vite
 - Tailwind CSS v4 (via `@tailwindcss/vite`)
 - Framer Motion (restrained entrance motion)
@@ -32,9 +32,9 @@ vercel
 
 ## Feature summary
 - Sticky responsive header with mobile menu
-- Hero, signature dishes, filterable menu, story, why-us, locations (placeholders), gallery with lightbox, demo enquiry form
-- Demo enquiry form validates and shows a DEMO-ONLY confirmation; it does NOT submit anywhere
-- `prefers-reduced-motion` is respected
+- Hero, signature dishes, filterable menu, story, why-us, location details (from public listings, unverified), photo-slot gallery (placeholders), demo enquiry form
+- Demo enquiry form validates (name, plus a valid email or phone) and shows a DEMO-ONLY confirmation; it does NOT submit anywhere
+- Reduced motion is respected: CSS transitions via a media query, and Framer Motion via `<MotionConfig reducedMotion="user">`
 - All food/location copy and prices are explicitly illustrative/unverified concept content
 
 ## What to replace for the real client site

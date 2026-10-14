@@ -7,7 +7,7 @@ const featured = menuItems.filter((i) => i.featured)
 
 export function SignatureDishes() {
   return (
-    <section className="relative py-20 sm:py-28">
+    <section id="signature" className="relative py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
           <div>
@@ -28,7 +28,7 @@ export function SignatureDishes() {
           </a>
         </div>
 
-        <div className="mt-10 grid gap-8 lg:grid-cols-3">
+        <div className="mt-10 grid gap-8 md:grid-cols-3">
           {featured.map((item, idx) => (
             <motion.div
               key={item.id}

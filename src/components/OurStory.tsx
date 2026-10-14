@@ -18,7 +18,7 @@ export function OurStory() {
               Fire, Smoke & <span className="text-copper">Heart</span>
             </h2>
             <p className="mt-6 text-lg text-cream/80 leading-relaxed">
-              *Concept copy only.* This section is a placeholder to showcase editorial storytelling. Real history, origins and team details will be added once verified from Meat the Porkers Group.
+              Concept copy only. This section is a placeholder to showcase editorial storytelling. Real history, origins and team details will be added once verified from Meat the Porkers Group.
             </p>
             <p className="mt-4 text-lg text-cream/80 leading-relaxed">
               The vision shown here: a modern pork-focused restaurant that puts fire and craft front and centre, keeping things casual, generous and shareable.

@@ -23,36 +23,36 @@ export function Locations() {
             <p className="mt-1 text-sm text-cream/60">
               First floor, corner lot at Plaza Damansara, Bukit Damansara
             </p>
-            <dl className="mt-6 space-y-5 text-base text-cream/80">
-              <div className="flex gap-3">
-                <MapPin className="mt-1 h-5 w-5 shrink-0 text-copper" />
-                <dd>
+            <ul className="mt-6 space-y-5 text-base text-cream/80">
+              <li className="flex gap-3">
+                <MapPin className="mt-1 h-5 w-5 shrink-0 text-copper" aria-hidden="true" />
+                <address className="not-italic">
                   9M, Jalan Medan Setia 1,<br />
                   Bukit Damansara,<br />
                   50490 Kuala Lumpur, Malaysia
-                </dd>
-              </div>
-              <div className="flex gap-3">
-                <Clock className="mt-1 h-5 w-5 shrink-0 text-copper" />
+                </address>
+              </li>
+              <li className="flex gap-3">
+                <Clock className="mt-1 h-5 w-5 shrink-0 text-copper" aria-hidden="true" />
                 <div>
-                  <dd className="font-medium text-cream">Opening hours</dd>
-                  <dd className="mt-1">
+                  <p className="font-medium text-cream">Opening hours</p>
+                  <p className="mt-1">
                     Mon &amp; Wed–Sun: 11:30am–3:00pm, 5:30pm–10:30pm
                     <br />
                     Tuesday: closed
-                  </dd>
-                  <dd className="mt-2 text-sm text-cream/50">*From a third-party listing — confirm before launch.*</dd>
+                  </p>
+                  <p className="mt-2 text-sm text-cream/50">
+                    From a third-party listing. Confirm before launch.
+                  </p>
                 </div>
-              </div>
-              <div className="flex gap-3">
-                <Phone className="mt-1 h-5 w-5 shrink-0 text-copper" />
-                <dd>
-                  <a href="tel:+60199871945" className="hover:text-copper transition-colors">
-                    +60 19-987 1945
-                  </a>
-                </dd>
-              </div>
-            </dl>
+              </li>
+              <li className="flex gap-3">
+                <Phone className="mt-1 h-5 w-5 shrink-0 text-copper" aria-hidden="true" />
+                <a href="tel:+60199871945" className="hover:text-copper transition-colors">
+                  +60 19-987 1945
+                </a>
+              </li>
+            </ul>
             <a
               href={mapsLink}
               target="_blank"

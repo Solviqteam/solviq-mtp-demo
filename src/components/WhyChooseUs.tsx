@@ -5,7 +5,7 @@ const points = [
   {
     icon: Flame,
     title: 'Fire & Smoke',
-    description: 'Conceptual focus on slow-cooking and fire-kissed flavours. *Unverified.*',
+    description: 'Conceptual focus on slow-cooking and fire-kissed flavours. Unverified.',
   },
   {
     icon: Users,

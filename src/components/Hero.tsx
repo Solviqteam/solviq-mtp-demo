@@ -4,7 +4,7 @@ import { PhotoPlaceholder } from '@/components/PhotoPlaceholder'
 
 export function Hero() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center">
+    <section id="home" className="relative min-h-svh flex items-center">
       <PhotoPlaceholder
         label="Hero food photography"
         className="absolute inset-0"
