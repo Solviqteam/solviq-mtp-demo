@@ -7,12 +7,20 @@ export function Hero() {
     <section id="home" className="relative min-h-svh flex items-center">
       <PhotoPlaceholder
         label="Hero food photography"
+        showLabel={false}
         className="absolute inset-0"
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-charcoal-950 via-charcoal-950/80 to-charcoal-950/40" />
-      <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950/90 via-transparent to-transparent" />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-r from-charcoal-950 via-charcoal-950/80 to-charcoal-950/40"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-t from-charcoal-950/90 via-transparent to-transparent"
+      />
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-20">
+      {/* relative + z-10: positioned overlays above would otherwise paint over this text */}
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 pt-20">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
